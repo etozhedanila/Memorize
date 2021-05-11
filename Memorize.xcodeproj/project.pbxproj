@@ -13,6 +13,10 @@
 		F6C792AE26451CFF0065FF58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C792AD26451CFF0065FF58 /* Preview Assets.xcassets */; };
 		F6C792B7264553BF0065FF58 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C792B6264553BF0065FF58 /* MemoryGame.swift */; };
 		F6C792BA264555CC0065FF58 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C792B9264555CC0065FF58 /* EmojiMemoryGame.swift */; };
+		F6C792BE264A5FCD0065FF58 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C792BD264A5FCD0065FF58 /* Grid.swift */; };
+		F6C792C1264AA4880065FF58 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C792C0264AA4880065FF58 /* GridLayout.swift */; };
+		F6C792C4264AAE2D0065FF58 /* Array + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C792C3264AAE2D0065FF58 /* Array + Extension.swift */; };
+		F6C792D1264AAEA90065FF58 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C792D0264AAEA90065FF58 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		F6C792AF26451CFF0065FF58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6C792B6264553BF0065FF58 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		F6C792B9264555CC0065FF58 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
+		F6C792BD264A5FCD0065FF58 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		F6C792C0264AA4880065FF58 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		F6C792C3264AAE2D0065FF58 /* Array + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + Extension.swift"; sourceTree = "<group>"; };
+		F6C792D0264AAEA90065FF58 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				F6C792A626451CFE0065FF58 /* MemorizeApp.swift */,
-				F6C792A826451CFE0065FF58 /* EmojiMemoryGameView.swift */,
-				F6C792B6264553BF0065FF58 /* MemoryGame.swift */,
-				F6C792B9264555CC0065FF58 /* EmojiMemoryGame.swift */,
+				F6C792C6264AAE3E0065FF58 /* Extensions */,
+				F6C792CB264AAE650065FF58 /* Grid */,
+				F6C792C8264AAE500065FF58 /* Model */,
+				F6C792CD264AAE6B0065FF58 /* View */,
+				F6C792CA264AAE580065FF58 /* ViewModel */,
 				F6C792AA26451CFF0065FF58 /* Assets.xcassets */,
 				F6C792AF26451CFF0065FF58 /* Info.plist */,
 				F6C792AC26451CFF0065FF58 /* Preview Content */,
@@ -73,6 +83,48 @@
 				F6C792AD26451CFF0065FF58 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F6C792C6264AAE3E0065FF58 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F6C792C3264AAE2D0065FF58 /* Array + Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F6C792C8264AAE500065FF58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6C792B6264553BF0065FF58 /* MemoryGame.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F6C792CA264AAE580065FF58 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6C792B9264555CC0065FF58 /* EmojiMemoryGame.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F6C792CB264AAE650065FF58 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				F6C792BD264A5FCD0065FF58 /* Grid.swift */,
+				F6C792C0264AA4880065FF58 /* GridLayout.swift */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
+		F6C792CD264AAE6B0065FF58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6C792A826451CFE0065FF58 /* EmojiMemoryGameView.swift */,
+				F6C792D0264AAEA90065FF58 /* CardView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +199,10 @@
 				F6C792B7264553BF0065FF58 /* MemoryGame.swift in Sources */,
 				F6C792A926451CFE0065FF58 /* EmojiMemoryGameView.swift in Sources */,
 				F6C792A726451CFE0065FF58 /* MemorizeApp.swift in Sources */,
+				F6C792C4264AAE2D0065FF58 /* Array + Extension.swift in Sources */,
+				F6C792C1264AA4880065FF58 /* GridLayout.swift in Sources */,
+				F6C792BE264A5FCD0065FF58 /* Grid.swift in Sources */,
+				F6C792D1264AAEA90065FF58 /* CardView.swift in Sources */,
 				F6C792BA264555CC0065FF58 /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,37 +1,11 @@
 //
-//  EmojiMemoryGameView.swift
+//  CardView.swift
 //  Memorize
 //
-//  Created by Виталий Субботин on 07.05.2021.
+//  Created by Виталий Субботин on 11.05.2021.
 //
 
 import SwiftUI
-
-struct EmojiMemoryGameView: View {
-    
-    @ObservedObject
-    var viewModel: EmojiMemoryGame
-    
-    var body: some View {
-        HStack {
-            ForEach(viewModel.cards) { card in
-                CardView(card: card)
-                    .onTapGesture {
-                        viewModel.choose(card: card)
-                    }
-            }
-        }
-        .foregroundColor(.orange)
-        .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        EmojiMemoryGameView(viewModel: EmojiMemoryGame())
-    }
-}
-
 
 struct CardView: View {
     
@@ -52,8 +26,10 @@ struct CardView: View {
                     .stroke(lineWidth: Constants.lineWidth)
                 Text(card.content)
             } else {
-                RoundedRectangle(cornerRadius: Constants.cornerRadius)
-                    .fill()
+                if !card.isMatched {
+                    RoundedRectangle(cornerRadius: Constants.cornerRadius)
+                        .fill()
+                }
             }
         }
         .font(.system(size: fontSize(for: size)))
@@ -71,3 +47,4 @@ struct CardView: View {
         static let fontScaleFactor: CGFloat = 0.75
     }
 }
+
