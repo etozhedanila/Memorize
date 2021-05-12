@@ -17,22 +17,18 @@ struct CardView: View {
         }
     }
     
+    @ViewBuilder
     private func body(for size: CGSize) -> some View {
-        ZStack {
-            if card.isFacedUp {
-                RoundedRectangle(cornerRadius: Constants.cornerRadius)
-                    .fill(Color.white)
-                RoundedRectangle(cornerRadius: Constants.cornerRadius)
-                    .stroke(lineWidth: Constants.lineWidth)
+        if card.isFacedUp || !card.isMatched {
+            ZStack {
+                Pie(startAngle: .degrees(-90), endAngle: .degrees(20), clockwise: true)
+                    .padding(Constants.piePadding)
+                    .opacity(Constants.pieOpacity)
                 Text(card.content)
-            } else {
-                if !card.isMatched {
-                    RoundedRectangle(cornerRadius: Constants.cornerRadius)
-                        .fill()
-                }
+                    .font(.system(size: fontSize(for: size)))
             }
+            .cardify(isFacedUp: card.isFacedUp)
         }
-        .font(.system(size: fontSize(for: size)))
     }
     
     private func fontSize(for size: CGSize) -> CGFloat {
@@ -42,9 +38,9 @@ struct CardView: View {
     // MARK: - Constants
     
     private enum Constants {
-        static let cornerRadius: CGFloat = 10
-        static let lineWidth: CGFloat = 3
-        static let fontScaleFactor: CGFloat = 0.75
+        static let piePadding: CGFloat = 5
+        static let pieOpacity: Double = 0.4
+        static let fontScaleFactor: CGFloat = 0.7
     }
 }
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F604DFFF264BC9190073A3C3 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604DFFE264BC9190073A3C3 /* Pie.swift */; };
+		F604E004264BD02A0073A3C3 /* View + Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604E003264BD02A0073A3C3 /* View + Cardify.swift */; };
+		F604E007264BD07D0073A3C3 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604E006264BD07D0073A3C3 /* Cardify.swift */; };
 		F6C792A726451CFE0065FF58 /* MemorizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C792A626451CFE0065FF58 /* MemorizeApp.swift */; };
 		F6C792A926451CFE0065FF58 /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C792A826451CFE0065FF58 /* EmojiMemoryGameView.swift */; };
 		F6C792AB26451CFF0065FF58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C792AA26451CFF0065FF58 /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F604DFFE264BC9190073A3C3 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
+		F604E003264BD02A0073A3C3 /* View + Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Cardify.swift"; sourceTree = "<group>"; };
+		F604E006264BD07D0073A3C3 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 		F6C792A326451CFE0065FF58 /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C792A626451CFE0065FF58 /* MemorizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeApp.swift; sourceTree = "<group>"; };
 		F6C792A826451CFE0065FF58 /* EmojiMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameView.swift; sourceTree = "<group>"; };
@@ -45,6 +51,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F604E001264BCE130073A3C3 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				F604DFFE264BC9190073A3C3 /* Pie.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		F604E009264BD36E0073A3C3 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				F604E006264BD07D0073A3C3 /* Cardify.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
 		F6C7929A26451CFE0065FF58 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +88,8 @@
 			children = (
 				F6C792A626451CFE0065FF58 /* MemorizeApp.swift */,
 				F6C792C6264AAE3E0065FF58 /* Extensions */,
+				F604E009264BD36E0073A3C3 /* ViewModifiers */,
+				F604E001264BCE130073A3C3 /* Shapes */,
 				F6C792CB264AAE650065FF58 /* Grid */,
 				F6C792C8264AAE500065FF58 /* Model */,
 				F6C792CD264AAE6B0065FF58 /* View */,
@@ -89,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				F6C792C3264AAE2D0065FF58 /* Array + Extension.swift */,
+				F604E003264BD02A0073A3C3 /* View + Cardify.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -196,13 +221,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F604E007264BD07D0073A3C3 /* Cardify.swift in Sources */,
 				F6C792B7264553BF0065FF58 /* MemoryGame.swift in Sources */,
 				F6C792A926451CFE0065FF58 /* EmojiMemoryGameView.swift in Sources */,
 				F6C792A726451CFE0065FF58 /* MemorizeApp.swift in Sources */,
+				F604DFFF264BC9190073A3C3 /* Pie.swift in Sources */,
 				F6C792C4264AAE2D0065FF58 /* Array + Extension.swift in Sources */,
 				F6C792C1264AA4880065FF58 /* GridLayout.swift in Sources */,
 				F6C792BE264A5FCD0065FF58 /* Grid.swift in Sources */,
 				F6C792D1264AAEA90065FF58 /* CardView.swift in Sources */,
+				F604E004264BD02A0073A3C3 /* View + Cardify.swift in Sources */,
 				F6C792BA264555CC0065FF58 /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
