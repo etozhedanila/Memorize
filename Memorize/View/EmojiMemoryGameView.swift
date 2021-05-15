@@ -13,14 +13,25 @@ struct EmojiMemoryGameView: View {
     var viewModel: EmojiMemoryGame
     
     var body: some View {
-        Grid(viewModel.cards) { card in
-            CardView(card: card)
-                .onTapGesture {
-                    viewModel.choose(card: card)
+        VStack {
+            Grid(viewModel.cards) { card in
+                CardView(card: card)
+                    .onTapGesture {
+                        withAnimation(.linear) {
+                            viewModel.choose(card: card)
+                        }
+                    }
+                    .padding(Constants.cardPadding)
+            }
+            .foregroundColor(.orange)
+            Button(action: {
+                withAnimation(.easeInOut) {
+                    viewModel.resetGame()
                 }
-                .padding(Constants.cardPadding)
+            }, label: {
+                Text("New Game")
+            })
         }
-        .foregroundColor(.orange)
     }
     
     // MARK: - Constants
@@ -29,6 +40,8 @@ struct EmojiMemoryGameView: View {
         static let cardPadding: CGFloat = 5
     }
 }
+
+// MARK: - Preview
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
