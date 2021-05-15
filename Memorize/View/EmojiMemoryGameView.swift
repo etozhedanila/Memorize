@@ -21,7 +21,6 @@ struct EmojiMemoryGameView: View {
                 .padding(Constants.cardPadding)
         }
         .foregroundColor(.orange)
-        .accessibilityHint("OOO")
     }
     
     // MARK: - Constants
