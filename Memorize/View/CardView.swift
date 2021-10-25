@@ -10,11 +10,18 @@ import SwiftUI
 struct CardView: View {
     
     var card: MemoryGame<String>.Card
+    var onTimeFinishedBlock: (() -> Void)?
     
     var body: some View {
         GeometryReader { geometry in
             body(for: geometry.size)
         }
+    }
+    
+    func onTimeFinished(perform action: @escaping () -> Void) -> Self {
+        var copy = self
+        copy.onTimeFinishedBlock = action
+        return copy
     }
     
     @State private var animatedBonusRemaining: Double = 0
@@ -23,6 +30,9 @@ struct CardView: View {
         animatedBonusRemaining = card.bonusRemaining
         withAnimation(.linear(duration: card.bonusTimeRemaining)) {
             animatedBonusRemaining = 0
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + card.bonusTimeRemaining) {
+            self.onTimeFinishedBlock?()
         }
     }
     

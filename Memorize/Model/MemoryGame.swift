@@ -54,6 +54,11 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         }
     }
     
+    mutating func close(card: Card) {
+        guard let index = cards.firstIndex(of: card) else { return }
+        cards[index].isFacedUp = false
+    }
+    
     struct Card: Identifiable {
         var id: Int
         var isFacedUp = false {
@@ -88,10 +93,6 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         
         var bonusRemaining: Double {
             (bonusTimeLimit > 0 && bonusTimeRemaining > 0) ? bonusTimeRemaining/bonusTimeLimit : 0
-        }
-        
-        var hasEarnedBonus: Bool {
-            isMatched && bonusTimeRemaining > 0
         }
         
         var isConsumingBonusTime: Bool {

@@ -30,6 +30,10 @@ class EmojiMemoryGame: ObservableObject {
         model.choose(card: card)
     }
     
+    func close(card: MemoryGame<String>.Card) {
+        model.close(card: card)
+    }
+    
     func resetGame() {
         model = EmojiMemoryGame.makeMemoryGame()
     }
